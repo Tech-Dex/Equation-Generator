@@ -72,5 +72,5 @@ if __name__ == "__main__":
         generator.equation()
     print(f"{nr_eq} record inserted.")
 
-    for result in session.select(table=TABLE):
-        print(result)
+    # for result in session.select(table=TABLE):
+    #     print(result)
