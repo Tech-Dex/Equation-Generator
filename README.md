@@ -17,7 +17,7 @@ ENV HOST "YOUR_HOST"
 ENV PORT "3306"
 ENV DATABASE "YOUR_DATABASE"
 ENV TABLE "YOUR_TABLE"
-
+ENV TIMER "60"
 
 RUN mkdir /equation-generator
 WORKDIR /equation-generator
