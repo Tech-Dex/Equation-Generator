@@ -5,7 +5,7 @@ import schedule
 
 from app.utils.Generator import Generator
 from app.database.sqldb import create_table
-from app.core.config import TABLE
+from app.core.config import TABLE, TIMER
 
 if __name__ == "__main__":
     try:
@@ -14,7 +14,7 @@ if __name__ == "__main__":
         print(f'Unhandled exception {e}')
         sys.exit()
 
-    schedule.every(10).seconds.do(Generator(table=TABLE).auto_fill_db)
+    schedule.every(TIMER).seconds.do(Generator(table=TABLE).auto_fill_db)
     while True:
         schedule.run_pending()
         time.sleep(1)
