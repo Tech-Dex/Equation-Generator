@@ -14,7 +14,7 @@ if __name__ == "__main__":
         print(f'Unhandled exception {e}')
         sys.exit()
 
-    schedule.every(TIMER).seconds.do(Generator(table=TABLE).auto_fill_db)
+    schedule.every(int(TIMER)).seconds.do(Generator(table=TABLE).auto_fill_db)
     while True:
         schedule.run_pending()
         time.sleep(1)
