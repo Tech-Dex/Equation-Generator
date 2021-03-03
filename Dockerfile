@@ -5,6 +5,7 @@ ENV PYTHONPATH "/equation-generator"
 
 ENV DB_USER "root"
 ENV DB_USER_PASSWORD "pass"
+ENV TIMER "60"
 ENV HOST "172.17.0.2"
 ENV PORT "3306"
 ENV DATABASE "math"
