@@ -1,7 +1,7 @@
 FROM python:3
 
 ENV PYTHONNUNBUFFERED 1
-ENV PYTHONPATH "/app"
+ENV PYTHONPATH "/equation-generator"
 
 ENV DB_USER "root"
 ENV DB_USER_PASSWORD "pass"
@@ -11,12 +11,12 @@ ENV DATABASE "math"
 ENV TABLE "equations"
 
 
-RUN mkdir /app
-WORKDIR /app
-ADD . /app
+RUN mkdir /equation-generator
+WORKDIR /equation-generator
+ADD . /equation-generator
 
 RUN apt-get update
-RUN pip install -r requirements.txt
+RUN pip install -r app/requirements.txt
 
-#CMD ["main.py"]
-#ENTRYPOINT ["python3"]
+CMD ["app/main.py"]
+ENTRYPOINT ["python3"]
